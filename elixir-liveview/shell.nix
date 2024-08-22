@@ -9,7 +9,6 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    echo "Welcome to the Elixir Advent of Code environment!"
     mix deps.get
   '';
 }
