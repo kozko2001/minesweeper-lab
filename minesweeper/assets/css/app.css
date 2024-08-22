@@ -1,0 +1,104 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Game Container */
+.board {
+  display: inline-block;
+  background-color: #2c3e50;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Row */
+.row {
+  display: flex;
+}
+
+/* Cell Button */
+button {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border: 2px solid #34495e;
+  border-radius: 4px;
+  background-color: #ecf0f1;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #bdc3c7;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Revealed Cell */
+button.revealed {
+  background-color: #bdc3c7;
+  border: 2px solid #7f8c8d;
+  cursor: default;
+}
+
+/* Flagged Cell */
+button.flagged {
+  background-color: #eeeeee;
+  color: #ffffff;
+}
+
+/* Mine Cell */
+button.mine {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+/* Header Styles */
+h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #e74c3c;
+  text-align: center;
+}
+
+button.new-game {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 300px;
+}
+
+button.new-game:hover {
+  background-color: #27ae60;
+}
+
+button.new-game:active {
+  transform: scale(0.95);
+}
